@@ -1,0 +1,3091 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{E7598471-7A94-4B79-8B18-36DBF2E49CFB}" Name="customer address data profile">
+      <DtsConnectionManagerID>customer address data profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{27B7969A-69AD-4E76-940D-64A2FAB4D498}" Name="Customer Data Profile">
+      <DtsConnectionManagerID>Customer Data Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9E55F7C5-1387-4085-9795-8A3BB5FF0340}" Name="DESKTOP-KTQKIBP.DWBI_TaxiTrips_StagingDB">
+      <DtsConnectionManagerID>DESKTOP-KTQKIBP.DWBI_TaxiTrips_StagingDB</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{8F7C078A-708C-43F2-A26D-3AA20A13EB9A}" Name="DESKTOP-KTQKIBP.DWBI_TaxiTrips_StagingDB 1">
+      <DtsConnectionManagerID>DESKTOP-KTQKIBP.DWBI_TaxiTrips_StagingDB 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{8A7B5309-625D-4374-B6A8-F64799D08414}" Name="DESKTOP-KTQKIBP.SLIIT_Retail_Staging_Area">
+      <DtsConnectionManagerID>DESKTOP-KTQKIBP.SLIIT_Retail_Staging_Area</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{54A4AC71-AD47-4FE3-AB6E-DDE34D36B67C}" Name="Driver Address data profile">
+      <DtsConnectionManagerID>Driver Address data profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{2CC1CB54-C590-4C4F-8FBE-6B322CF6AAA9}" Name="Driver Data Profile">
+      <DtsConnectionManagerID>Driver Data Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0E7FE8F3-8B6C-4DC0-AC26-FC52F1B9A9A8}" Name="Payment data profile">
+      <DtsConnectionManagerID>Payment data profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{C4CE1BDA-421E-4C7A-9C42-E3CC9D691F5D}" Name="root detail profile">
+      <DtsConnectionManagerID>root detail profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{93C7B611-10EF-4A7D-AEC8-28A09F9176C1}" Name="Trip Detail Profile">
+      <DtsConnectionManagerID>Trip Detail Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{06555460-9743-465D-9101-05AB6270BEBD}" Name="TripDetail Data Profile">
+      <DtsConnectionManagerID>TripDetail Data Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{7D478F03-0DBA-40F9-8967-7DC981D5077F}" Name="TripRootDetails Data Profile">
+      <DtsConnectionManagerID>TripRootDetails Data Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D4F5F304-C8C2-4274-AA58-693669D2BA6D}" Name="vehicle data profile">
+      <DtsConnectionManagerID>vehicle data profile</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="DriverAddressStaging" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="DriverAddressStaging" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="DriverAddressStaging" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="DriverAddressStaging" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="DriverAddressStaging" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="DriverAddressStaging" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="DriverAddressStaging" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>103535</MinValue>
+        <MaxValue>105881</MaxValue>
+        <Mean>104642.58008008</Mean>
+        <StdDev>656.620479270596</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>9</MinLength>
+        <MaxLength>48</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>29</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>169</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>77</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>18</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>31</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>370</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>195</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>18</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>73</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>42</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>38</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>212</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>48</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>309</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>13</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>167</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>8</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>220</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>17</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>12</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>28</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>1835</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>20</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>12</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>12</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>26</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>25</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>2</MinLength>
+        <MaxLength>2</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>1998</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>10</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>1919</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>76</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>69</MinLength>
+        <MaxLength>113</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>69</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>92</Length>
+            <Count>21</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>75</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>89</Length>
+            <Count>36</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>95</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>72</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>78</Length>
+            <Count>54</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>86</Length>
+            <Count>111</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>113</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>81</Length>
+            <Count>186</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>87</Length>
+            <Count>46</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>101</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>70</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>93</Length>
+            <Count>8</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>84</Length>
+            <Count>240</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>90</Length>
+            <Count>23</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>79</Length>
+            <Count>175</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>73</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>85</Length>
+            <Count>175</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>99</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>76</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>108</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>82</Length>
+            <Count>269</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>88</Length>
+            <Count>33</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>71</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>94</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>77</Length>
+            <Count>17</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>83</Length>
+            <Count>366</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>91</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>97</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>80</Length>
+            <Count>172</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>74</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <KeyColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1998</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <KeyColumns>
+          <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>false</IsExactKey>
+        <KeyStrength>0.9744745</KeyStrength>
+        <KeyViolations>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>4100 S ASHLAND AVE</ColumnValue>
+            </ColumnValues>
+            <Count>6</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>7601 S CICERO AVE</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3115 W 26TH ST</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>222 MERCHANDISE MART PLZ</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>200 E RANDOLPH ST</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3101 W 26TH ST</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>4545 W DIVISION ST</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>600 E GRAND AVE</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>875 N MICHIGAN AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>8650 S MORGAN ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>831 W CORNELIA AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>7408 S JEFFERY BLVD</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>720 S MICHIGAN AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>700 E GRAND AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>625 N MICHIGAN AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5841 S MARYLAND AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>5316 N MILWAUKEE AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>525 W MONROE ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>4863 W IRVING PARK RD</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>4737 N CLARK ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>4635 W LAWRENCE AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>4532 S KOLIN AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>4249 W 63RD ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>311 S WACKER DR</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>400 E RANDOLPH ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3812 W 26TH ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3632 1/2 HARVEY AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>3301 W 47TH PL</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>29 E MADISON ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2752 W LAWRENCE AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>2626 N LAKEVIEW AVE</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>248 W DIVERSEY PKWY</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>222 W ADAMS ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>1633 W 95TH ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>1400 E 47TH ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>131 N CLINTON ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>124 S FRANKLIN ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>1200 W 35TH ST</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+        </KeyViolations>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1947</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1200 W 35TH ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>124 S FRANKLIN ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>131 N CLINTON ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1400 E 47TH ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1633 W 95TH ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>200 E RANDOLPH ST</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>222 MERCHANDISE MART PLZ</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>222 W ADAMS ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>248 W DIVERSEY PKWY</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2626 N LAKEVIEW AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2752 W LAWRENCE AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>29 E MADISON ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3101 W 26TH ST</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>311 S WACKER DR</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3115 W 26TH ST</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3301 W 47TH PL</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3632 1/2 HARVEY AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3812 W 26TH ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>400 E RANDOLPH ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4100 S ASHLAND AVE</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4249 W 63RD ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4532 S KOLIN AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4545 W DIVISION ST</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4635 W LAWRENCE AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4737 N CLARK ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4863 W IRVING PARK RD</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>525 W MONROE ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5316 N MILWAUKEE AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5841 S MARYLAND AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>600 E GRAND AVE</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>625 N MICHIGAN AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>700 E GRAND AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>720 S MICHIGAN AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7408 S JEFFERY BLVD</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7601 S CICERO AVE</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>831 W CORNELIA AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8650 S MORGAN ST</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>875 N MICHIGAN AVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>162</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>O FALLON</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ATLANTA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CLEVELAND</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BURBANK</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SAINT CHARLES</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DOWNERS GROVE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>HIGHLAND PARK</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DANVILLE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>JOLIET</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DEERFIELD</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NORTHBROOK</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CLEARWATER</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BERWYN</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CHICAGO</Value>
+            <Count>1811</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PALATINE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>INDIANAPOLIS</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NEW LENOX</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NILES</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MAYWOOD</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CICERO</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OKLAHOMA CITY</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OAK PARK</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>31</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>TX</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WI</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PA</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IN</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IL</Value>
+            <Count>1892</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MD</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CO</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MI</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NY</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OH</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NJ</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MO</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CA</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OR</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MN</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OK</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FL</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AZ</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>UT</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1845</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value />
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60402-3831</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60601</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60601-5906</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60601-6436</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60601-6528</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60604</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60605-2116</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60606-4606</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60606-5312</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60606-5829</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60606-6627</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60607</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60607-4015</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60608-6818</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60609</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60609-1305</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60609-2330</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60609-3823</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60609-5801</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60610</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60611</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60611-2605</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60611-3110</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60611-3436</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60612</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60613-4105</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60614</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60614-0000</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60614-1416</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60614-1510</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60614-2020</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60614-3717</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60614-4020</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60614-5806</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60616-0000</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60618</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60618-3105</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60618-3113</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60618-4635</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60618-5803</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60619</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60619-5301</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60620-3248</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60620-5205</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60621-3412</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60622</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60622-0000</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60622-1530</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60622-5237</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60623-3309</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60623-3513</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60623-3807</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60623-4145</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60624-2215</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60624-2354</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60625</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60625-0000</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60625-1412</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60625-2010</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60625-6233</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60628-2823</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60628-4322</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60629-4610</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60629-5041</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60630</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60630-1269</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60630-2532</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60630-2813</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60631</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60631-3840</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60632-2614</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60632-2844</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60632-3012</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60632-4222</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60632-4914</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60634-5311</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60637</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60637-1447</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60638-2206</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60639-1030</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60639-3814</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60639-4041</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60640</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60640-3002</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60640-5659</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60641</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60641-2719</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60641-3957</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60643-1331</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60643-3134</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60643-5211</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60644-1478</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60645-0000</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60647</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60647-2629</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60647-2924</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60647-4015</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60647-4317</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60647-5316</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60649-3622</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60651-1634</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60652-1022</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60653-4520</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60655-2221</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60657</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60657-0000</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60657-1106</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60657-1420</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60657-1734</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60657-4413</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60657-6289</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60659</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60659-2003</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60660-2410</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60660-2518</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60661-0000</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60666-0000</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60707-1716</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <KeyColumns>
+          <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>false</IsExactKey>
+        <KeyStrength>0.9824825</KeyStrength>
+        <KeyViolations>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"4100 S ASHLAND AVE
+CHICAGO, IL 60609-2330
+(41.81960898700004, -87.66526767499994)"</ColumnValue>
+            </ColumnValues>
+            <Count>6</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"3115 W 26TH ST
+CHICAGO, IL 60623-4145
+(41.844522952000034, -87.70339333199996)"</ColumnValue>
+            </ColumnValues>
+            <Count>4</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"3101 W 26TH ST
+CHICAGO, IL 60623-4145
+(41.844532843000025, -87.70270070199996)"</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"4545 W DIVISION ST
+CHICAGO, IL 60651-1634
+(41.90244307000006, -87.74051052499999)"</ColumnValue>
+            </ColumnValues>
+            <Count>3</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"3632 1/2 HARVEY AVE
+BERWYN, IL 60402-3831
+(41.82638102100003, -87.77915765899996)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"3301 W 47TH PL
+CHICAGO, IL 60632-3012
+(41.80676334900005, -87.70604001499999)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"311 S WACKER DR
+CHICAGO, IL 60606-6627
+(41.877571067000076, -87.63661388299994)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"4249 W 63RD ST
+CHICAGO, IL 60629-5041
+(41.77856355600005, -87.72955001999998)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"3812 W 26TH ST
+CHICAGO, IL 60623-3807
+(41.84435453400005, -87.72019922899995)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"8650 S MORGAN ST
+CHICAGO, IL 60620-3248
+(41.736339342000065, -87.64851695399994)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"831 W CORNELIA AVE
+CHICAGO, IL 60657-1734
+(41.94540308300003, -87.65067865199995)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"7601 S CICERO AVE
+CHICAGO, IL 60652-1022
+(41.757398840000064, -87.74159958899997)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"248 W DIVERSEY PKWY
+CHICAGO, IL 60657-6289
+(41.921881934000055, -88.21040112599997)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"222 W ADAMS ST
+CHICAGO, IL 60606-5312
+(41.87942232000006, -87.63415443699995)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"200 E RANDOLPH ST
+CHICAGO, IL 60601-6436
+(41.884537763000026, -87.62214122299997)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"7408 S JEFFERY BLVD
+CHICAGO, IL 60649-3622
+(41.76034943800005, -87.57619744299996)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"720 S MICHIGAN AVE
+CHICAGO, IL 60605-2116
+(41.87261971200007, -87.62421763499998)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"700 E GRAND AVE
+CHICAGO, IL 60611-3436
+(41.89209757200007, -87.60920070599997)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"625 N MICHIGAN AVE
+CHICAGO, IL 60611-3110
+(41.89312226200008, -87.62415425999995)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"5841 S MARYLAND AVE
+CHICAGO, IL 60637-1447
+(41.78881314200004, -87.60488815299999)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"5316 N MILWAUKEE AVE
+CHICAGO, IL 60630-1269
+(41.97717891600007, -87.76915394599996)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"1633 W 95TH ST
+CHICAGO, IL 60643-1331
+(41.72112361200004, -87.66333046499994)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"1400 E 47TH ST
+CHICAGO, IL 60653-4520
+(41.80971936800006, -87.59231502299997)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"124 S FRANKLIN ST
+CHICAGO, IL 60606-4606
+(41.88030197200004, -87.63530829099994)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"1200 W 35TH ST
+CHICAGO, IL 60609-1305
+(41.83062825800005, -87.65645156699998)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"4863 W IRVING PARK RD
+CHICAGO, IL 60641-2719
+(41.953357942000025, -87.74895588399994)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+          <MultiColumnValueDistributionItem>
+            <ColumnValues>
+              <ColumnValue>"4635 W LAWRENCE AVE
+CHICAGO, IL 60630-2532
+(41.96803325500008, -87.74445017699998)"</ColumnValue>
+            </ColumnValues>
+            <Count>2</Count>
+          </MultiColumnValueDistributionItem>
+        </KeyViolations>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1963</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>"3812 W 26TH ST
+CHICAGO, IL 60623-3807
+(41.84435453400005, -87.72019922899995)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"4100 S ASHLAND AVE
+CHICAGO, IL 60609-2330
+(41.81960898700004, -87.66526767499994)"</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"4249 W 63RD ST
+CHICAGO, IL 60629-5041
+(41.77856355600005, -87.72955001999998)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"4545 W DIVISION ST
+CHICAGO, IL 60651-1634
+(41.90244307000006, -87.74051052499999)"</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"4635 W LAWRENCE AVE
+CHICAGO, IL 60630-2532
+(41.96803325500008, -87.74445017699998)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"4863 W IRVING PARK RD
+CHICAGO, IL 60641-2719
+(41.953357942000025, -87.74895588399994)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"1200 W 35TH ST
+CHICAGO, IL 60609-1305
+(41.83062825800005, -87.65645156699998)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"124 S FRANKLIN ST
+CHICAGO, IL 60606-4606
+(41.88030197200004, -87.63530829099994)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"1400 E 47TH ST
+CHICAGO, IL 60653-4520
+(41.80971936800006, -87.59231502299997)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"1633 W 95TH ST
+CHICAGO, IL 60643-1331
+(41.72112361200004, -87.66333046499994)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"5316 N MILWAUKEE AVE
+CHICAGO, IL 60630-1269
+(41.97717891600007, -87.76915394599996)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"5841 S MARYLAND AVE
+CHICAGO, IL 60637-1447
+(41.78881314200004, -87.60488815299999)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"625 N MICHIGAN AVE
+CHICAGO, IL 60611-3110
+(41.89312226200008, -87.62415425999995)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"700 E GRAND AVE
+CHICAGO, IL 60611-3436
+(41.89209757200007, -87.60920070599997)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"720 S MICHIGAN AVE
+CHICAGO, IL 60605-2116
+(41.87261971200007, -87.62421763499998)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"7408 S JEFFERY BLVD
+CHICAGO, IL 60649-3622
+(41.76034943800005, -87.57619744299996)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"200 E RANDOLPH ST
+CHICAGO, IL 60601-6436
+(41.884537763000026, -87.62214122299997)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"222 W ADAMS ST
+CHICAGO, IL 60606-5312
+(41.87942232000006, -87.63415443699995)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"248 W DIVERSEY PKWY
+CHICAGO, IL 60657-6289
+(41.921881934000055, -88.21040112599997)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"7601 S CICERO AVE
+CHICAGO, IL 60652-1022
+(41.757398840000064, -87.74159958899997)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"831 W CORNELIA AVE
+CHICAGO, IL 60657-1734
+(41.94540308300003, -87.65067865199995)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"8650 S MORGAN ST
+CHICAGO, IL 60620-3248
+(41.736339342000065, -87.64851695399994)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"3101 W 26TH ST
+CHICAGO, IL 60623-4145
+(41.844532843000025, -87.70270070199996)"</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"311 S WACKER DR
+CHICAGO, IL 60606-6627
+(41.877571067000076, -87.63661388299994)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"3115 W 26TH ST
+CHICAGO, IL 60623-4145
+(41.844522952000034, -87.70339333199996)"</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"3301 W 47TH PL
+CHICAGO, IL 60632-3012
+(41.80676334900005, -87.70604001499999)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"3632 1/2 HARVEY AVE
+BERWYN, IL 60402-3831
+(41.82638102100003, -87.77915765899996)"</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d\d \p{L}+ \p{L}+ AVE</RegexText>
+            <Frequency>36</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d\d (\p{L}+ )+</RegexText>
+            <Frequency>24</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d \p{L}+ \p{L}+ \p{L}+</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d\d \p{L}+ \d+\p{L}+ ST</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d+ (\p{L}+ )+</RegexText>
+            <Frequency>8</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d+ \p{L}+ \d+\p{L}+ ST</RegexText>
+            <Frequency>2</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d+ \p{L}+ \d+\p{L}+ \p{L}+</RegexText>
+            <Frequency>1</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>.*</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>CHICAGO</RegexText>
+            <Frequency>91</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>6</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>IL</RegexText>
+            <Frequency>95</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}\p{L}</RegexText>
+            <Frequency>5</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d\d\d-\d\d\d\d</RegexText>
+            <Frequency>96</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>.*</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.991992</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>131 N CLINTON ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"131 N CLINTON ST
+CHICAGO, IL 60661-1506
+(41.883954208000034, -87.64117420499997)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>200 E RANDOLPH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"200 E RANDOLPH ST
+CHICAGO, IL 60601-6436
+(41.884537763000026, -87.62214122299997)"</DependentValue>
+            <SupportCount>2</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>222 MERCHANDISE MART PLZ</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"222 MERCHANDISE MART PLZ
+CHICAGO, IL 60654-2239
+(41.88801240400005, -87.63454158799999)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2626 N LAKEVIEW AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"2626 N LAKEVIEW AVE
+CHICAGO, IL 60614-1809
+(41.93042696100008, -87.63931691999994)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2752 W LAWRENCE AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"2752 W LAWRENCE AVE
+CHICAGO, IL 60625-0000
+(41.96856791400006, -87.69808005199997)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>29 E MADISON ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"29 E MADISON ST
+CHICAGO, IL 60602-4404
+(41.88204028900003, -87.62683870399997)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>400 E RANDOLPH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"400 E RANDOLPH ST
+CHICAGO, IL 60601-7310
+(41.88456772200004, -87.61727052799995)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4532 S KOLIN AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"4532 S KOLIN AVE
+CHICAGO, IL 60632-4457
+(41.81003006800006, -87.73247681599997)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4737 N CLARK ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"4737 N CLARK ST
+CHICAGO, IL 60640-7758
+(41.96812772200008, -87.66728242799996)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>525 W MONROE ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"525 W MONROE ST
+CHICAGO, IL 60661-2345
+(41.880542802000036, -87.64054085899994)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>600 E GRAND AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"600 E GRAND AVE
+CHICAGO, IL 60611
+(41.892089060000046, -87.60973551799998)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>7601 S CICERO AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"7601 S CICERO AVE
+CHICAGO, IL 60652-1022
+(41.757398840000064, -87.74159958899997)"</DependentValue>
+            <SupportCount>2</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>875 N MICHIGAN AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>"875 N MICHIGAN AVE
+CHICAGO, IL 60611-1908
+(41.89873433400004, -87.62405801699998)"</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.991992</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>131 N CLINTON ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60661-1506</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>200 E RANDOLPH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60601-6436</DependentValue>
+            <SupportCount>2</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>222 MERCHANDISE MART PLZ</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60654-2239</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2626 N LAKEVIEW AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60614-1809</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2752 W LAWRENCE AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60625-0000</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>29 E MADISON ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60602-4404</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>400 E RANDOLPH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60601-7310</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4532 S KOLIN AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60632-4457</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4737 N CLARK ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60640-7758</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>525 W MONROE ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60661-3649</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>600 E GRAND AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60611</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>7601 S CICERO AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60652-1022</DependentValue>
+            <SupportCount>2</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>875 N MICHIGAN AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>60611-1908</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.998999</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>CLEVELAND</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>TN</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>SAINT CHARLES</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>IL</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="STATE" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="ZIP" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="CITY" SqlDbType="NVarChar" MaxLength="100" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="LOCATION" SqlDbType="NVarChar" MaxLength="500" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.9824825</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"1200 W 35TH ST
+CHICAGO, IL 60609-1305
+(41.83062825800005, -87.65645156699998)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104132</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"124 S FRANKLIN ST
+CHICAGO, IL 60606-4606
+(41.88030197200004, -87.63530829099994)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105439</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"1400 E 47TH ST
+CHICAGO, IL 60653-4520
+(41.80971936800006, -87.59231502299997)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103898</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"1633 W 95TH ST
+CHICAGO, IL 60643-1331
+(41.72112361200004, -87.66333046499994)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104673</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"200 E RANDOLPH ST
+CHICAGO, IL 60601-6436
+(41.884537763000026, -87.62214122299997)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103783</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"222 W ADAMS ST
+CHICAGO, IL 60606-5312
+(41.87942232000006, -87.63415443699995)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104987</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"248 W DIVERSEY PKWY
+CHICAGO, IL 60657-6289
+(41.921881934000055, -88.21040112599997)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104874</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"3101 W 26TH ST
+CHICAGO, IL 60623-4145
+(41.844532843000025, -87.70270070199996)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104233</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"311 S WACKER DR
+CHICAGO, IL 60606-6627
+(41.877571067000076, -87.63661388299994)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104529</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"3115 W 26TH ST
+CHICAGO, IL 60623-4145
+(41.844522952000034, -87.70339333199996)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104940</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"3301 W 47TH PL
+CHICAGO, IL 60632-3012
+(41.80676334900005, -87.70604001499999)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105622</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"3632 1/2 HARVEY AVE
+BERWYN, IL 60402-3831
+(41.82638102100003, -87.77915765899996)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105038</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"3812 W 26TH ST
+CHICAGO, IL 60623-3807
+(41.84435453400005, -87.72019922899995)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104403</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"4100 S ASHLAND AVE
+CHICAGO, IL 60609-2330
+(41.81960898700004, -87.66526767499994)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104206</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>5</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"4249 W 63RD ST
+CHICAGO, IL 60629-5041
+(41.77856355600005, -87.72955001999998)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105013</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"4545 W DIVISION ST
+CHICAGO, IL 60651-1634
+(41.90244307000006, -87.74051052499999)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103921</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"4635 W LAWRENCE AVE
+CHICAGO, IL 60630-2532
+(41.96803325500008, -87.74445017699998)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104259</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"4863 W IRVING PARK RD
+CHICAGO, IL 60641-2719
+(41.953357942000025, -87.74895588399994)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104759</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"5316 N MILWAUKEE AVE
+CHICAGO, IL 60630-1269
+(41.97717891600007, -87.76915394599996)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105827</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"5841 S MARYLAND AVE
+CHICAGO, IL 60637-1447
+(41.78881314200004, -87.60488815299999)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104597</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"625 N MICHIGAN AVE
+CHICAGO, IL 60611-3110
+(41.89312226200008, -87.62415425999995)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103756</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"700 E GRAND AVE
+CHICAGO, IL 60611-3436
+(41.89209757200007, -87.60920070599997)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104521</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"720 S MICHIGAN AVE
+CHICAGO, IL 60605-2116
+(41.87261971200007, -87.62421763499998)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103599</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"7408 S JEFFERY BLVD
+CHICAGO, IL 60649-3622
+(41.76034943800005, -87.57619744299996)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105292</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"7601 S CICERO AVE
+CHICAGO, IL 60652-1022
+(41.757398840000064, -87.74159958899997)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104214</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"831 W CORNELIA AVE
+CHICAGO, IL 60657-1734
+(41.94540308300003, -87.65067865199995)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104769</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>"8650 S MORGAN ST
+CHICAGO, IL 60620-3248
+(41.736339342000065, -87.64851695399994)"</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103616</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="DriverAddressStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="ADDRESS" SqlDbType="NVarChar" MaxLength="200" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.9744745</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>1200 W 35TH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104132</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>124 S FRANKLIN ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105439</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>131 N CLINTON ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105393</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>1400 E 47TH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103898</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>1633 W 95TH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104673</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>200 E RANDOLPH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104424</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>222 MERCHANDISE MART PLZ</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105753</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>222 W ADAMS ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104987</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>248 W DIVERSEY PKWY</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104874</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2626 N LAKEVIEW AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104838</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2752 W LAWRENCE AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104189</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>29 E MADISON ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103679</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>3101 W 26TH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104233</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>311 S WACKER DR</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104529</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>3115 W 26TH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104940</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>3301 W 47TH PL</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105622</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>3632 1/2 HARVEY AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105038</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>3812 W 26TH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104403</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>400 E RANDOLPH ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103769</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4100 S ASHLAND AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103586</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>5</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4249 W 63RD ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105013</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4532 S KOLIN AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104160</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4545 W DIVISION ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103921</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4635 W LAWRENCE AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104259</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4737 N CLARK ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105680</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>4863 W IRVING PARK RD</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104759</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>525 W MONROE ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104317</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>5316 N MILWAUKEE AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105827</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>5841 S MARYLAND AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104597</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>600 E GRAND AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104449</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>625 N MICHIGAN AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103756</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>700 E GRAND AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104521</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>720 S MICHIGAN AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103599</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>7408 S JEFFERY BLVD</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>105292</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>7601 S CICERO AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104214</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>831 W CORNELIA AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>104769</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>8650 S MORGAN ST</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103616</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>875 N MICHIGAN AVE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>103593</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

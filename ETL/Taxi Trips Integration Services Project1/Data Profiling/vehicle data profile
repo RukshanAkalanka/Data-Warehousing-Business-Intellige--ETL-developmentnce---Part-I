@@ -1,0 +1,2326 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{E7598471-7A94-4B79-8B18-36DBF2E49CFB}" Name="customer address data profile">
+      <DtsConnectionManagerID>customer address data profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{27B7969A-69AD-4E76-940D-64A2FAB4D498}" Name="Customer Data Profile">
+      <DtsConnectionManagerID>Customer Data Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9E55F7C5-1387-4085-9795-8A3BB5FF0340}" Name="DESKTOP-KTQKIBP.DWBI_TaxiTrips_StagingDB">
+      <DtsConnectionManagerID>DESKTOP-KTQKIBP.DWBI_TaxiTrips_StagingDB</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{8F7C078A-708C-43F2-A26D-3AA20A13EB9A}" Name="DESKTOP-KTQKIBP.DWBI_TaxiTrips_StagingDB 1">
+      <DtsConnectionManagerID>DESKTOP-KTQKIBP.DWBI_TaxiTrips_StagingDB 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{8A7B5309-625D-4374-B6A8-F64799D08414}" Name="DESKTOP-KTQKIBP.SLIIT_Retail_Staging_Area">
+      <DtsConnectionManagerID>DESKTOP-KTQKIBP.SLIIT_Retail_Staging_Area</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{54A4AC71-AD47-4FE3-AB6E-DDE34D36B67C}" Name="Driver Address data profile">
+      <DtsConnectionManagerID>Driver Address data profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{2CC1CB54-C590-4C4F-8FBE-6B322CF6AAA9}" Name="Driver Data Profile">
+      <DtsConnectionManagerID>Driver Data Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0E7FE8F3-8B6C-4DC0-AC26-FC52F1B9A9A8}" Name="Payment data profile">
+      <DtsConnectionManagerID>Payment data profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{C4CE1BDA-421E-4C7A-9C42-E3CC9D691F5D}" Name="root detail profile">
+      <DtsConnectionManagerID>root detail profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{93C7B611-10EF-4A7D-AEC8-28A09F9176C1}" Name="Trip Detail Profile">
+      <DtsConnectionManagerID>Trip Detail Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{06555460-9743-465D-9101-05AB6270BEBD}" Name="TripDetail Data Profile">
+      <DtsConnectionManagerID>TripDetail Data Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{7D478F03-0DBA-40F9-8967-7DC981D5077F}" Name="TripRootDetails Data Profile">
+      <DtsConnectionManagerID>TripRootDetails Data Profile</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D4F5F304-C8C2-4274-AA58-693669D2BA6D}" Name="vehicle data profile">
+      <DtsConnectionManagerID>vehicle data profile</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="VehicleStaging" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="VehicleStaging" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="VehicleStaging" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="VehicleStaging" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="VehicleStaging" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="VehicleStaging" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table Schema="dbo" Table="VehicleStaging" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleMake" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleModel" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleModelYear" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleColor" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleFuelSource" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>4</MinValue>
+        <MaxValue>1000013</MaxValue>
+        <Mean>27254.2757757758</Mean>
+        <StdDev>129393.037428172</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>103535</MinValue>
+        <MaxValue>105881</MaxValue>
+        <Mean>104642.58008008</Mean>
+        <StdDev>656.620479270596</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleModelYear" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>2019</MaxValue>
+        <Mean>1988.02102102102</Mean>
+        <StdDev>223.816058822295</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>20</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>124</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>529</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>103</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>1055</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>176</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleMake" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>20</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>13</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>129</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>79</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>28</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>802</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>233</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>24</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>441</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>62</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>178</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleModel" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>18</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>18</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>94</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>206</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>271</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>113</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>40</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>243</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>20</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>734</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>34</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>183</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleColor" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>32</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>39</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>36</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>17</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>32</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>159</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>42</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>198</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>65</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>168</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>1144</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>89</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>16</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleFuelSource" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>22</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>36</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>915</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>28</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>25</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>994</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>1</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>1998</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <KeyColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1998</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <KeyColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1998</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Horse Drawn Carriage</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Charter Sightseeing</Value>
+            <Count>176</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Ambulance</Value>
+            <Count>124</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Taxi</Value>
+            <Count>1055</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Medicar</Value>
+            <Count>82</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pedicab</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Livery</Value>
+            <Count>529</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleMake" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>46</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>CADILLAC</Value>
+            <Count>92</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>HONDA</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CHAMPION</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ALEXANDER DENNIS LTD</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MANMADE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MCI</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MAINSTREET</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>INFINITI</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DODGE</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TROYER</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>INTL</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GMC</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VPG</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>LEYLAND</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MARTIN</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BMW</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MERCEDES</Value>
+            <Count>58</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>KIA</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NISSAN</Value>
+            <Count>70</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FREIGHTLINER</Value>
+            <Count>28</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value />
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CHEVROLET</Value>
+            <Count>127</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ALEXANDER</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DOUBLE SHUFLE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VIP</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>LINCOLN</Value>
+            <Count>219</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TOYOTA</Value>
+            <Count>721</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MAZDA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>HYUNDAI</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CHRYSLER</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FREIGHLINE</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>LEXUS</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FORD</Value>
+            <Count>432</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AUDI</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CUSTOM</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleModel" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>123</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>XTS</Value>
+            <Count>62</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E350</Value>
+            <Count>91</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IMPALA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>METRIS</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MKT</Value>
+            <Count>69</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ESCALADE</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>C-MAX</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SONATA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>EXPEDITION</Value>
+            <Count>33</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CARRYALL</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NV200</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SCION</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>G40M2</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ODYSSEY</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TRANSIT BUS</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VIS-A-VIS</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ELANTRA</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TOWN AND COUNTRY</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M2 106</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>350</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>F550</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SPRINTER</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>EXPRESS</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SIENNA</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>EXCURSION</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MKS</Value>
+            <Count>43</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CLASSIC</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>QX60</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PRIUS</Value>
+            <Count>234</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AMBULANCE</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E450</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>300</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>XBS</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>A8</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TAHOE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ECONOLINE</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ELDORADO BUS</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CROWN VICTORIA</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D4505</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OLYMPIAN</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FUSION</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>X LINE SHUTTLE</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value />
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MKZ</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>F650</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MV-1</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BROADWAY</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ENVIRO 400</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VIP</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MKX</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E250</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ALTIMA</Value>
+            <Count>63</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GRAND CARAVAN</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>COROLLA</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4505</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TROLLEY</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PATHFINDER</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RAV4</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M2106</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ESCALADE ESV</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TOWN CAR</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CARAVAN</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CSM STYLE</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAMRY</Value>
+            <Count>407</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>STARCRAFT</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M LINE SHUTTLE BUS</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VAN</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BENZ</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SEDONA</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SUBURBAN</Value>
+            <Count>111</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NAVIGATOR</Value>
+            <Count>62</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E150</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TRANSIT</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>T150</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CONTINENTAL</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ESCAPE</Value>
+            <Count>132</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>S550</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ES 300</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>F150</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>102C3</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>YUKON</Value>
+            <Count>32</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleModelYear" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>32</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1998</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2004</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2010</Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2001</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2007</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013</Value>
+            <Count>282</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1996</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2008</Value>
+            <Count>30</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2002</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2016</Value>
+            <Count>215</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1999</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2005</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2019</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1988</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2000</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2014</Value>
+            <Count>280</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1997</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2003</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2011</Value>
+            <Count>154</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2017</Value>
+            <Count>158</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2006</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012</Value>
+            <Count>288</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2018</Value>
+            <Count>126</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2009</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2015</Value>
+            <Count>193</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleColor" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>55</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>SILVER</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE/STARS/STRIPES</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MAROON/GOLD/STRIPES</Value>
+            <Count>92</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GREEN</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GRAY</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE/RED/STRIPES</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BLUE/WHITE</Value>
+            <Count>110</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RED/WHITE/BLUE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GRAY/WHITE</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE/YELLOW</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RED/BLUE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE/BLUE/STRIPES</Value>
+            <Count>41</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RED/CREAM</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RED/BLACK</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE/BLACK</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE/RED</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MAROON/BLUE/STRIPES</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CREAM/BLACK/RED STRIPES</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ORANGE/BLUE</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RED</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE/BLACK/STRIPES</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RED/WHITE</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CREAM/BLUE</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value />
+            <Count>39</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BLACK/WHITE</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MAROON</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CREAM/GREEN</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GOLD</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BURGUNDY</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BLACK/WHITE/RED/BLUE</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BLACK</Value>
+            <Count>597</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>YELLOW/BLUE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BLUE</Value>
+            <Count>51</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>YELLOW</Value>
+            <Count>141</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE</Value>
+            <Count>529</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>WHITE/BLUE</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RED/GREEN</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MAROON WITH WHITE STRIPES</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ORANGE</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleFuelSource" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>8</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Hybrid</Value>
+            <Count>886</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Horse</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pedal</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Compressed Natural Gas</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Diesel</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gasoline</Value>
+            <Count>993</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Flex Fuel</Value>
+            <Count>36</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>N</Value>
+            <Count>1925</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Y</Value>
+            <Count>73</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>TAXI</RegexText>
+            <Frequency>53</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>LIVERY</RegexText>
+            <Frequency>26</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>CHARTER SIGHTSEEING</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>AMBULANCE</RegexText>
+            <Frequency>6</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>5</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleMake" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>TOYOTA</RegexText>
+            <Frequency>36</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>FORD</RegexText>
+            <Frequency>22</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>LINCOLN</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>CHEVROLET</RegexText>
+            <Frequency>6</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>24</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleModel" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>CAMRY</RegexText>
+            <Frequency>21</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>PRIUS</RegexText>
+            <Frequency>12</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SUBURBAN</RegexText>
+            <Frequency>6</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>ESCAPE</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}\d\d\d</RegexText>
+            <Frequency>8</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>35</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+\d+</RegexText>
+            <Frequency>3</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+</RegexText>
+            <Frequency>4</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>.*</RegexText>
+            <Frequency>5</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleColor" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>BLACK</RegexText>
+            <Frequency>30</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>WHITE</RegexText>
+            <Frequency>27</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>YELLOW</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>MAROON/\p{L}+/STRIPES</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+/WHITE</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+/\p{L}+/STRIPES</RegexText>
+            <Frequency>4</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+/\p{L}+</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="VehicleFuelSource" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>GASOLINE</RegexText>
+            <Frequency>50</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>HYBRID</RegexText>
+            <Frequency>44</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>3</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <Column Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>N</RegexText>
+            <Frequency>96</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleFuelSource" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleFuelSource" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleColor" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleColor" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleModelYear" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleModelYear" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleModel" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleModel" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleMake" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleMake" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="DriverId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleFuelSource" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.971972</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Compressed Natural Gas</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>Y</DependentValue>
+            <SupportCount>21</SupportCount>
+            <ViolationCount>4</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Diesel</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>28</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Flex Fuel</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>20</SupportCount>
+            <ViolationCount>16</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Gasoline</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>958</SupportCount>
+            <ViolationCount>35</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleColor" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.9634635</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>BLACK/WHITE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>19</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>BLUE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>49</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>BLUE/WHITE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>102</SupportCount>
+            <ViolationCount>8</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>BURGUNDY</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>12</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>GRAY/WHITE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>47</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>GREEN</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>11</SupportCount>
+            <ViolationCount>6</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>MAROON WITH WHITE STRIPES</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>MAROON/BLUE/STRIPES</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>45</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>MAROON/GOLD/STRIPES</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>83</SupportCount>
+            <ViolationCount>9</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>ORANGE/BLUE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>51</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>WHITE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>503</SupportCount>
+            <ViolationCount>26</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>WHITE/BLACK</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>2</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>WHITE/BLUE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>25</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>WHITE/BLUE/STRIPES</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>39</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>YELLOW</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>132</SupportCount>
+            <ViolationCount>9</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleModelYear" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.9634635</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>1998</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>4</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2010</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>51</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2012</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>265</SupportCount>
+            <ViolationCount>23</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2013</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>279</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2014</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>270</SupportCount>
+            <ViolationCount>10</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2015</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>190</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2016</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>204</SupportCount>
+            <ViolationCount>11</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2017</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>155</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2018</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>118</SupportCount>
+            <ViolationCount>8</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>2019</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>28</SupportCount>
+            <ViolationCount>8</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleModel" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.982983</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>CARAVAN</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>Y</DependentValue>
+            <SupportCount>15</SupportCount>
+            <ViolationCount>14</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>GRAND CARAVAN</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>10</SupportCount>
+            <ViolationCount>9</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>MV-1</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>Y</DependentValue>
+            <SupportCount>28</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>SIENNA</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>Y</DependentValue>
+            <SupportCount>19</SupportCount>
+            <ViolationCount>8</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>TOWN AND COUNTRY</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>6</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>TROLLEY</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>17</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleMake" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.976977</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>CHRYSLER</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>10</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>DODGE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>26</SupportCount>
+            <ViolationCount>24</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>FREIGHLINE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>11</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>TOYOTA</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>702</SupportCount>
+            <ViolationCount>19</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>VPG</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>Y</DependentValue>
+            <SupportCount>28</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleType" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="WheelchairAccessible" SqlDbType="NVarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.9634635</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Ambulance</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>120</SupportCount>
+            <ViolationCount>4</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Charter Sightseeing</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>170</SupportCount>
+            <ViolationCount>6</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Horse Drawn Carriage</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>10</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Livery</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>512</SupportCount>
+            <ViolationCount>17</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Medicar</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>78</SupportCount>
+            <ViolationCount>4</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Pedicab</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>18</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>Taxi</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>N</DependentValue>
+            <SupportCount>1017</SupportCount>
+            <ViolationCount>38</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{9E55F7C5-1387-4085-9795-8A3BB5FF0340}</DataSourceID>
+        <Table DataSource="DESKTOP-KTQKIBP" Database="DWBI_TaxiTrips_StagingDB" Schema="dbo" Table="VehicleStaging" RowCount="1998" />
+        <DeterminantColumns>
+          <Column Name="VehicleModel" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="VehicleMake" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>false</IsExactFD>
+        <FDStrength>0.9754755</FDStrength>
+        <FDViolations>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue />
+            </DeterminantValues>
+            <DependentValue />
+            <SupportCount>13</SupportCount>
+            <ViolationCount>5</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>102C3</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>MCI</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>BROADWAY</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>MANMADE</DependentValue>
+            <SupportCount>2</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>CARRYALL</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>AUDI</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>CLASSIC</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>MAINSTREET</DependentValue>
+            <SupportCount>9</SupportCount>
+            <ViolationCount>4</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>C-MAX</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FORD</DependentValue>
+            <SupportCount>23</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>E250</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FORD</DependentValue>
+            <SupportCount>16</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>E350</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FORD</DependentValue>
+            <SupportCount>88</SupportCount>
+            <ViolationCount>3</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>F150</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FORD</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>M LINE SHUTTLE BUS</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FREIGHTLINER</DependentValue>
+            <SupportCount>2</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>M2 106</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FREIGHTLINER</DependentValue>
+            <SupportCount>3</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>S</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>MERCEDES</DependentValue>
+            <SupportCount>1</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>S550</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>MERCEDES</DependentValue>
+            <SupportCount>5</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>SPRINTER</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>MERCEDES</DependentValue>
+            <SupportCount>35</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>STARCRAFT</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FORD</DependentValue>
+            <SupportCount>4</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>TOWN AND COUNTRY</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>CHRYSLER</DependentValue>
+            <SupportCount>5</SupportCount>
+            <ViolationCount>2</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>TRANSIT BUS</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FORD</DependentValue>
+            <SupportCount>3</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>TROLLEY</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FREIGHLINE</DependentValue>
+            <SupportCount>5</SupportCount>
+            <ViolationCount>13</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>VAN</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FORD</DependentValue>
+            <SupportCount>8</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>VIS-A-VIS</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>MARTIN</DependentValue>
+            <SupportCount>4</SupportCount>
+            <ViolationCount>4</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>X LINE SHUTTLE</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>FREIGHTLINER</DependentValue>
+            <SupportCount>2</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+          <FDViolationItem>
+            <DeterminantValues>
+              <ColumnValue>YUKON</ColumnValue>
+            </DeterminantValues>
+            <DependentValue>GMC</DependentValue>
+            <SupportCount>31</SupportCount>
+            <ViolationCount>1</ViolationCount>
+          </FDViolationItem>
+        </FDViolations>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
